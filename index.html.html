@@ -1,0 +1,2147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kasse — The Operating System for Service Businesses</title>
+<meta name="description" content="Booking. Payments. Payroll. Banking. AI Receptionist. All in one place. Join the waitlist for the platform that runs your business while you focus on your craft.">
+<meta property="og:title" content="Kasse — The Operating System for Service Businesses">
+<meta property="og:description" content="Booking. Payments. Payroll. Banking. AI Receptionist. All in one place.">
+<meta property="og:image" content="https://kasseapp.com/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300;1,9..40,400&display=swap" rel="stylesheet">
+<style>
+:root {
+  --brand: #2F5061;
+  --brand-dark: #1C3040;
+  --brand-mid: #3A6274;
+  --blush: #E57F84;
+  --blush-light: #F9ECED;
+  --blush-dark: #C45A5F;
+  --teal: #4297A0;
+  --teal-light: #EAF4F6;
+  --cream: #F4EAE6;
+  --cream-mid: #EDE3DF;
+  --page: #FAF8F6;
+  --white: #FFFFFF;
+  --text: #1C2B33;
+  --text-mid: #3D4F58;
+  --text-muted: #7A8F96;
+  --border: #E4DDD7;
+  --border-mid: #D4CCC6;
+  --shadow-sm: 0 1px 3px rgba(47,80,97,0.08);
+  --shadow-md: 0 4px 16px rgba(47,80,97,0.10);
+  --shadow-lg: 0 16px 48px rgba(47,80,97,0.14);
+  --r: 12px;
+  --r-sm: 8px;
+  --r-lg: 20px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'DM Sans', -apple-system, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--text);
+  background: var(--page);
+  -webkit-font-smoothing: antialiased;
+}
+
+.serif { font-family: 'Instrument Serif', Georgia, serif; }
+.italic { font-style: italic; }
+
+/* ─── NAV ─── */
+nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 100;
+  background: rgba(250,248,246,0.92);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+  height: 64px;
+  display: flex;
+  align-items: center;
+}
+
+.nav-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 32px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-family: 'Instrument Serif', Georgia, serif;
+  font-size: 24px;
+  color: var(--brand);
+  text-decoration: none;
+  letter-spacing: -0.5px;
+}
+
+.logo span { color: var(--blush); }
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  list-style: none;
+}
+
+.nav-links a {
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--text-mid);
+  text-decoration: none;
+  transition: color 150ms ease;
+}
+.nav-links a:hover { color: var(--brand); }
+
+.nav-cta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  height: 40px;
+  padding: 0 20px;
+  border-radius: var(--r-sm);
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 150ms ease;
+  text-decoration: none;
+  border: none;
+  white-space: nowrap;
+}
+
+.btn-primary {
+  background: var(--brand);
+  color: var(--white);
+  box-shadow: 0 1px 3px rgba(47,80,97,0.25), inset 0 1px 0 rgba(255,255,255,0.08);
+}
+.btn-primary:hover { background: var(--brand-mid); transform: translateY(-1px); box-shadow: 0 4px 12px rgba(47,80,97,0.28); }
+
+.btn-blush {
+  background: var(--blush);
+  color: var(--white);
+  box-shadow: 0 1px 3px rgba(229,127,132,0.30);
+}
+.btn-blush:hover { background: var(--blush-dark); transform: translateY(-1px); box-shadow: 0 4px 12px rgba(229,127,132,0.30); }
+
+.btn-ghost {
+  background: transparent;
+  color: var(--text-mid);
+  border: 1px solid var(--border-mid);
+}
+.btn-ghost:hover { background: var(--cream); color: var(--brand); }
+
+.btn-lg {
+  height: 52px;
+  padding: 0 32px;
+  font-size: 16px;
+  border-radius: 10px;
+}
+
+.btn-xl {
+  height: 60px;
+  padding: 0 40px;
+  font-size: 17px;
+  border-radius: 10px;
+}
+
+/* ─── LAYOUT ─── */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+section { padding: 100px 0; }
+
+/* ─── HERO ─── */
+.hero {
+  padding-top: 160px;
+  padding-bottom: 80px;
+  background: var(--page);
+  overflow: hidden;
+  position: relative;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0; right: -20%;
+  width: 60%;
+  height: 100%;
+  background: radial-gradient(ellipse at top right, rgba(66,151,160,0.07) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: -10%;
+  width: 50%;
+  height: 60%;
+  background: radial-gradient(ellipse at bottom left, rgba(229,127,132,0.06) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.hero-inner {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--blush-light);
+  color: var(--blush-dark);
+  border: 1px solid rgba(229,127,132,0.25);
+  padding: 6px 14px;
+  border-radius: 100px;
+  font-size: 13px;
+  font-weight: 500;
+  margin-bottom: 28px;
+}
+
+.hero-badge-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--blush);
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.6; transform: scale(0.8); }
+}
+
+.hero h1 {
+  font-family: 'Instrument Serif', Georgia, serif;
+  font-size: 60px;
+  line-height: 1.08;
+  letter-spacing: -1.5px;
+  color: var(--text);
+  margin-bottom: 24px;
+}
+
+.hero h1 em {
+  font-style: italic;
+  color: var(--brand);
+}
+
+.hero-sub {
+  font-size: 19px;
+  line-height: 1.6;
+  color: var(--text-mid);
+  margin-bottom: 40px;
+  max-width: 520px;
+}
+
+.hero-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 48px;
+}
+
+.hero-trust {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+.hero-trust-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.hero-trust-dot {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--border-mid);
+}
+
+/* Hero visual */
+.hero-visual {
+  position: relative;
+}
+
+.hero-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--r-lg);
+  padding: 28px;
+  box-shadow: var(--shadow-lg);
+  position: relative;
+}
+
+.hero-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.hero-card-title {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.hero-revenue {
+  font-family: 'Instrument Serif', Georgia, serif;
+  font-size: 52px;
+  line-height: 1;
+  color: var(--brand);
+  letter-spacing: -1px;
+  margin-bottom: 4px;
+}
+
+.hero-revenue-label {
+  font-size: 13px;
+  color: var(--text-muted);
+  margin-bottom: 24px;
+}
+
+.hero-target {
+  background: var(--teal-light);
+  border: 1px solid rgba(66,151,160,0.2);
+  border-radius: var(--r-sm);
+  padding: 12px 16px;
+  margin-bottom: 20px;
+}
+
+.hero-target-label {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--teal);
+  margin-bottom: 4px;
+}
+
+.hero-target-bar {
+  height: 6px;
+  background: rgba(66,151,160,0.15);
+  border-radius: 3px;
+  overflow: hidden;
+  margin: 8px 0 6px;
+}
+
+.hero-target-fill {
+  height: 100%;
+  width: 73%;
+  background: var(--teal);
+  border-radius: 3px;
+}
+
+.hero-target-stat {
+  font-size: 12px;
+  color: var(--text-muted);
+  display: flex;
+  justify-content: space-between;
+}
+
+.hero-staff-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--border);
+}
+.hero-staff-row:last-child { border-bottom: none; }
+
+.hero-staff-name {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text);
+}
+
+.hero-staff-commission {
+  font-size: 14px;
+  color: var(--brand);
+  font-weight: 500;
+}
+
+.hero-staff-tag {
+  font-size: 11px;
+  background: var(--blush-light);
+  color: var(--blush-dark);
+  padding: 2px 8px;
+  border-radius: 100px;
+  font-weight: 500;
+}
+
+/* Floating badges on hero */
+.hero-float {
+  position: absolute;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--r-sm);
+  padding: 12px 16px;
+  box-shadow: var(--shadow-md);
+  font-size: 13px;
+  animation: float 4s ease-in-out infinite;
+}
+
+.hero-float-1 {
+  top: -20px;
+  right: -20px;
+  animation-delay: 0s;
+}
+
+.hero-float-2 {
+  bottom: 30px;
+  left: -30px;
+  animation-delay: 2s;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+}
+
+.hero-float-icon {
+  font-size: 20px;
+  margin-bottom: 4px;
+}
+
+.hero-float-title {
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 2px;
+}
+
+.hero-float-sub {
+  color: var(--text-muted);
+  font-size: 12px;
+}
+
+/* ─── SECTION HEADERS ─── */
+.section-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--blush);
+  margin-bottom: 16px;
+}
+
+.section-label::before {
+  content: '';
+  width: 20px;
+  height: 1px;
+  background: var(--blush);
+  display: inline-block;
+}
+
+h2.section-title {
+  font-family: 'Instrument Serif', Georgia, serif;
+  font-size: 48px;
+  line-height: 1.1;
+  letter-spacing: -1px;
+  color: var(--text);
+  margin-bottom: 20px;
+}
+
+h2.section-title em { font-style: italic; color: var(--brand); }
+
+.section-sub {
+  font-size: 18px;
+  color: var(--text-mid);
+  line-height: 1.6;
+  max-width: 560px;
+}
+
+/* ─── PAIN SECTION ─── */
+.pain { background: var(--brand); }
+
+.pain .section-label { color: rgba(244,234,230,0.7); }
+.pain .section-label::before { background: rgba(244,234,230,0.5); }
+
+.pain h2.section-title { color: var(--white); }
+.pain h2.section-title em { color: var(--blush); }
+.pain .section-sub { color: rgba(255,255,255,0.7); }
+
+.pain-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2px;
+  margin-top: 64px;
+  border-radius: var(--r-lg);
+  overflow: hidden;
+}
+
+.pain-item {
+  background: rgba(255,255,255,0.06);
+  padding: 36px;
+  transition: background 200ms ease;
+}
+.pain-item:hover { background: rgba(255,255,255,0.10); }
+
+.pain-number {
+  font-family: 'Instrument Serif', Georgia, serif;
+  font-size: 48px;
+  color: rgba(229,127,132,0.25);
+  line-height: 1;
+  margin-bottom: 16px;
+}
+
+.pain-title {
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--white);
+  margin-bottom: 10px;
+}
+
+.pain-body {
+  font-size: 15px;
+  color: rgba(255,255,255,0.6);
+  line-height: 1.6;
+}
+
+/* ─── FEATURES ─── */
+.features-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  margin-top: 80px;
+  align-items: center;
+}
+
+.features-grid.reverse { direction: rtl; }
+.features-grid.reverse > * { direction: ltr; }
+
+.feature-visual {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--r-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+}
+
+.feature-visual-header {
+  background: var(--brand);
+  padding: 14px 20px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.feature-visual-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.2);
+}
+
+.feature-visual-title {
+  font-size: 12px;
+  color: rgba(255,255,255,0.7);
+  font-weight: 500;
+  letter-spacing: 0.3px;
+  margin-left: 4px;
+}
+
+.feature-visual-body { padding: 24px; }
+
+.feature-tag {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  color: var(--teal);
+  background: var(--teal-light);
+  padding: 4px 10px;
+  border-radius: 100px;
+  margin-bottom: 16px;
+}
+
+.feature-content h3 {
+  font-family: 'Instrument Serif', Georgia, serif;
+  font-size: 36px;
+  line-height: 1.15;
+  letter-spacing: -0.8px;
+  color: var(--text);
+  margin-bottom: 16px;
+}
+
+.feature-content h3 em { font-style: italic; color: var(--brand); }
+
+.feature-content p {
+  font-size: 16px;
+  color: var(--text-mid);
+  line-height: 1.7;
+  margin-bottom: 28px;
+}
+
+.feature-bullets {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.feature-bullets li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 15px;
+  color: var(--text-mid);
+  line-height: 1.5;
+}
+
+.feature-bullet-check {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--teal-light);
+  border: 1px solid rgba(66,151,160,0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.feature-bullet-check::after {
+  content: '';
+  width: 6px;
+  height: 4px;
+  border-left: 1.5px solid var(--teal);
+  border-bottom: 1.5px solid var(--teal);
+  transform: rotate(-45deg) translateY(-1px);
+}
+
+/* Feature UI mockups */
+.profit-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--border);
+}
+.profit-row:last-child { border-bottom: none; }
+
+.profit-service { font-size: 14px; font-weight: 500; color: var(--text); }
+.profit-revenue { font-size: 13px; color: var(--text-muted); }
+.profit-margin {
+  font-size: 13px;
+  font-weight: 600;
+  padding: 3px 10px;
+  border-radius: 100px;
+}
+.profit-margin.high { background: #E8F7F1; color: #1A6B4A; }
+.profit-margin.mid { background: #FEF3C7; color: #92400E; }
+.profit-margin.low { background: #FEF2F2; color: #B91C1C; }
+
+.alert-card {
+  background: var(--cream);
+  border: 1px solid var(--cream-mid);
+  border-radius: var(--r-sm);
+  padding: 16px;
+  margin-top: 16px;
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.alert-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  background: var(--blush-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  flex-shrink: 0;
+}
+
+.alert-title { font-size: 13px; font-weight: 600; color: var(--text); margin-bottom: 3px; }
+.alert-body { font-size: 12px; color: var(--text-muted); }
+
+/* Schedule mockup */
+.schedule-slot {
+  display: flex;
+  gap: 12px;
+  align-items: stretch;
+  margin-bottom: 8px;
+}
+
+.schedule-time {
+  font-size: 12px;
+  color: var(--text-muted);
+  width: 44px;
+  padding-top: 10px;
+  flex-shrink: 0;
+  text-align: right;
+}
+
+.schedule-block {
+  flex: 1;
+  border-radius: var(--r-sm);
+  padding: 10px 14px;
+}
+
+.schedule-block.confirmed { background: rgba(47,80,97,0.08); border-left: 3px solid var(--brand); }
+.schedule-block.pending { background: rgba(229,127,132,0.08); border-left: 3px solid var(--blush); }
+.schedule-block.open { background: var(--cream); border: 1px dashed var(--cream-mid); }
+
+.schedule-client { font-size: 13px; font-weight: 500; color: var(--text); }
+.schedule-service { font-size: 12px; color: var(--text-muted); }
+
+/* Payroll mockup */
+.payroll-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--border);
+}
+.payroll-row:last-child { border-bottom: none; }
+
+.payroll-staff { display: flex; align-items: center; gap: 10px; }
+
+.payroll-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--teal-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--teal);
+}
+
+.payroll-name { font-size: 14px; font-weight: 500; color: var(--text); }
+.payroll-type { font-size: 12px; color: var(--text-muted); }
+.payroll-amount { font-size: 15px; font-weight: 600; color: var(--brand); }
+
+/* ─── STATS ─── */
+.stats { background: var(--cream); }
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2px;
+  margin-top: 64px;
+  border-radius: var(--r-lg);
+  overflow: hidden;
+}
+
+.stat-item {
+  background: var(--white);
+  padding: 40px 32px;
+  text-align: center;
+}
+
+.stat-number {
+  font-family: 'Instrument Serif', Georgia, serif;
+  font-size: 52px;
+  line-height: 1;
+  color: var(--brand);
+  letter-spacing: -1.5px;
+  margin-bottom: 8px;
+}
+
+.stat-label { font-size: 15px; color: var(--text-muted); }
+
+/* ─── INCUBATOR ─── */
+.incubator {
+  background: var(--brand);
+  position: relative;
+  overflow: hidden;
+}
+
+.incubator::before {
+  content: '';
+  position: absolute;
+  top: -100px; right: -100px;
+  width: 500px; height: 500px;
+  background: radial-gradient(ellipse, rgba(229,127,132,0.12) 0%, transparent 70%);
+}
+
+.incubator::after {
+  content: '';
+  position: absolute;
+  bottom: -50px; left: -50px;
+  width: 400px; height: 400px;
+  background: radial-gradient(ellipse, rgba(66,151,160,0.10) 0%, transparent 70%);
+}
+
+.incubator-inner {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.incubator .section-label { color: rgba(229,127,132,0.8); }
+.incubator .section-label::before { background: rgba(229,127,132,0.5); }
+
+.incubator h2.section-title { color: var(--white); }
+.incubator h2.section-title em { color: var(--blush); }
+.incubator .section-sub { color: rgba(255,255,255,0.7); max-width: 100%; }
+
+.incubator-steps {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.incubator-step {
+  display: flex;
+  gap: 20px;
+  padding: 24px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.10);
+}
+.incubator-step:last-child { border-bottom: none; }
+
+.step-num {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 1px solid rgba(229,127,132,0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--blush);
+  flex-shrink: 0;
+}
+
+.step-title { font-size: 16px; font-weight: 500; color: var(--white); margin-bottom: 4px; }
+.step-body { font-size: 14px; color: rgba(255,255,255,0.6); line-height: 1.5; }
+
+.incubator-prize {
+  background: rgba(255,255,255,0.07);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: var(--r-lg);
+  padding: 40px;
+}
+
+.prize-eyebrow {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--blush);
+  margin-bottom: 16px;
+}
+
+.prize-title {
+  font-family: 'Instrument Serif', Georgia, serif;
+  font-size: 36px;
+  line-height: 1.1;
+  color: var(--white);
+  letter-spacing: -0.8px;
+  margin-bottom: 8px;
+}
+
+.prize-sub {
+  font-size: 15px;
+  color: rgba(255,255,255,0.6);
+  margin-bottom: 32px;
+}
+
+.prize-items {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 32px;
+}
+
+.prize-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 15px;
+  color: rgba(255,255,255,0.85);
+}
+
+.prize-check {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: rgba(229,127,132,0.15);
+  border: 1px solid rgba(229,127,132,0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.prize-check::after {
+  content: '';
+  width: 6px;
+  height: 4px;
+  border-left: 1.5px solid var(--blush);
+  border-bottom: 1.5px solid var(--blush);
+  transform: rotate(-45deg) translateY(-1px);
+}
+
+.prize-divider {
+  height: 1px;
+  background: rgba(255,255,255,0.10);
+  margin-bottom: 20px;
+}
+
+.prize-also {
+  font-size: 13px;
+  color: rgba(255,255,255,0.5);
+  margin-bottom: 8px;
+}
+
+.prize-also-items {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.prize-also-item {
+  font-size: 14px;
+  color: rgba(255,255,255,0.7);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.prize-also-dot {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.3);
+  flex-shrink: 0;
+}
+
+/* ─── VERTICALS ─── */
+.verticals-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-top: 64px;
+}
+
+.vertical-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--r-lg);
+  padding: 28px 24px;
+  transition: all 200ms ease;
+  cursor: default;
+}
+
+.vertical-card:hover {
+  border-color: var(--brand);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-3px);
+}
+
+.vertical-icon {
+  font-size: 32px;
+  margin-bottom: 14px;
+  line-height: 1;
+}
+
+.vertical-name {
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--text);
+  margin-bottom: 6px;
+}
+
+.vertical-desc {
+  font-size: 13px;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+/* ─── TESTIMONIALS ─── */
+.testimonials { background: var(--cream); }
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 64px;
+}
+
+.testimonial-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--r-lg);
+  padding: 32px;
+}
+
+.testimonial-stars {
+  display: flex;
+  gap: 3px;
+  margin-bottom: 20px;
+}
+
+.star { color: #F59E0B; font-size: 16px; }
+
+.testimonial-quote {
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--text-mid);
+  margin-bottom: 24px;
+  font-family: 'Instrument Serif', Georgia, serif;
+  font-style: italic;
+}
+
+.testimonial-author {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.testimonial-avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--teal-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--teal);
+  flex-shrink: 0;
+}
+
+.testimonial-name { font-size: 14px; font-weight: 600; color: var(--text); }
+.testimonial-biz { font-size: 13px; color: var(--text-muted); }
+
+/* ─── PRICING ─── */
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 64px;
+}
+
+.pricing-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--r-lg);
+  padding: 36px 32px;
+  position: relative;
+  transition: all 200ms ease;
+}
+
+.pricing-card:hover { box-shadow: var(--shadow-md); }
+
+.pricing-card.featured {
+  border-color: var(--brand);
+  box-shadow: 0 0 0 1px var(--brand);
+}
+
+.pricing-popular {
+  position: absolute;
+  top: -14px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--brand);
+  color: var(--white);
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  padding: 5px 14px;
+  border-radius: 100px;
+  white-space: nowrap;
+}
+
+.pricing-plan { font-size: 14px; font-weight: 600; color: var(--text-muted); margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.5px; }
+.pricing-price {
+  font-family: 'Instrument Serif', Georgia, serif;
+  font-size: 52px;
+  line-height: 1;
+  color: var(--text);
+  letter-spacing: -1.5px;
+  margin-bottom: 4px;
+}
+.pricing-price sup { font-size: 24px; vertical-align: super; margin-right: 2px; font-family: 'DM Sans', sans-serif; font-weight: 400; }
+.pricing-price sub { font-size: 16px; vertical-align: bottom; font-family: 'DM Sans', sans-serif; font-weight: 400; color: var(--text-muted); }
+.pricing-desc { font-size: 14px; color: var(--text-muted); margin-bottom: 32px; line-height: 1.5; }
+
+.pricing-features {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 32px;
+}
+
+.pricing-features li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  color: var(--text-mid);
+}
+
+.pricing-check {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: var(--teal-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.pricing-check::after {
+  content: '';
+  width: 5px;
+  height: 3px;
+  border-left: 1.5px solid var(--teal);
+  border-bottom: 1.5px solid var(--teal);
+  transform: rotate(-45deg) translateY(-1px);
+}
+
+/* ─── WAITLIST SECTION ─── */
+.waitlist {
+  background: var(--page);
+  text-align: center;
+  padding: 120px 0;
+}
+
+.waitlist-inner {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.waitlist h2 {
+  font-family: 'Instrument Serif', Georgia, serif;
+  font-size: 52px;
+  line-height: 1.08;
+  letter-spacing: -1.5px;
+  color: var(--text);
+  margin-bottom: 20px;
+}
+
+.waitlist h2 em { font-style: italic; color: var(--brand); }
+
+.waitlist-sub {
+  font-size: 18px;
+  color: var(--text-mid);
+  margin-bottom: 48px;
+  line-height: 1.6;
+}
+
+.waitlist-form {
+  display: flex;
+  gap: 12px;
+  max-width: 480px;
+  margin: 0 auto 20px;
+}
+
+.waitlist-input {
+  flex: 1;
+  height: 52px;
+  padding: 0 18px;
+  background: var(--white);
+  border: 1px solid var(--border-mid);
+  border-radius: 10px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 15px;
+  color: var(--text);
+  outline: none;
+  transition: border-color 150ms ease, box-shadow 150ms ease;
+}
+
+.waitlist-input::placeholder { color: var(--text-muted); }
+
+.waitlist-input:focus {
+  border-color: var(--brand);
+  box-shadow: 0 0 0 3px rgba(47,80,97,0.10);
+}
+
+.waitlist-note {
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+/* Success state */
+.waitlist-success {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.waitlist-success-icon {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: var(--teal-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+}
+
+.waitlist-success-title {
+  font-family: 'Instrument Serif', Georgia, serif;
+  font-size: 28px;
+  color: var(--text);
+}
+
+.waitlist-success-sub { font-size: 16px; color: var(--text-muted); }
+
+/* ─── FOOTER ─── */
+footer {
+  background: var(--brand);
+  padding: 64px 0 40px;
+}
+
+.footer-inner {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 48px;
+  margin-bottom: 64px;
+}
+
+.footer-brand { color: var(--white); }
+
+.footer-logo {
+  font-family: 'Instrument Serif', Georgia, serif;
+  font-size: 28px;
+  color: var(--white);
+  margin-bottom: 16px;
+  display: block;
+}
+
+.footer-logo span { color: var(--blush); }
+
+.footer-tagline {
+  font-size: 14px;
+  color: rgba(255,255,255,0.55);
+  line-height: 1.6;
+  margin-bottom: 24px;
+  max-width: 260px;
+}
+
+.footer-col-title {
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  color: rgba(255,255,255,0.4);
+  margin-bottom: 16px;
+}
+
+.footer-links { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+
+.footer-links a {
+  font-size: 14px;
+  color: rgba(255,255,255,0.65);
+  text-decoration: none;
+  transition: color 150ms ease;
+}
+
+.footer-links a:hover { color: var(--white); }
+
+.footer-bottom {
+  border-top: 1px solid rgba(255,255,255,0.10);
+  padding-top: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer-copy {
+  font-size: 13px;
+  color: rgba(255,255,255,0.35);
+}
+
+.footer-powered {
+  font-size: 11px;
+  color: rgba(255,255,255,0.20);
+}
+
+/* ─── DIVIDERS ─── */
+.divider {
+  width: 100%;
+  height: 1px;
+  background: var(--border);
+}
+
+/* ─── ANIMATIONS ─── */
+.fade-up {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 600ms ease, transform 600ms ease;
+}
+
+.fade-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ─── MOBILE ─── */
+@media (max-width: 1024px) {
+  .hero-inner { grid-template-columns: 1fr; gap: 48px; }
+  .hero-visual { display: none; }
+  .hero h1 { font-size: 48px; }
+  .features-grid { grid-template-columns: 1fr; gap: 48px; }
+  .features-grid.reverse { direction: ltr; }
+  .incubator-inner { grid-template-columns: 1fr; gap: 48px; }
+  .stats-grid { grid-template-columns: repeat(2, 1fr); }
+  .verticals-grid { grid-template-columns: repeat(2, 1fr); }
+  .testimonials-grid { grid-template-columns: 1fr; }
+  .pricing-grid { grid-template-columns: 1fr; max-width: 480px; margin-left: auto; margin-right: auto; }
+  .footer-inner { grid-template-columns: 1fr 1fr; gap: 32px; }
+  .pain-grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 768px) {
+  nav .nav-links { display: none; }
+  section { padding: 72px 0; }
+  .container { padding: 0 20px; }
+  .hero { padding-top: 120px; }
+  .hero h1 { font-size: 38px; }
+  h2.section-title { font-size: 36px; }
+  .hero-actions { flex-direction: column; align-items: flex-start; }
+  .stats-grid { grid-template-columns: 1fr; }
+  .verticals-grid { grid-template-columns: 1fr 1fr; }
+  .waitlist-form { flex-direction: column; }
+  .footer-inner { grid-template-columns: 1fr; }
+  .footer-bottom { flex-direction: column; gap: 12px; text-align: center; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <a href="#" class="logo">kasse<span>.</span></a>
+    <ul class="nav-links">
+      <li><a href="#features">Features</a></li>
+      <li><a href="#pricing">Pricing</a></li>
+      <li><a href="#incubator">Founders Program</a></li>
+      <li><a href="#verticals">Who it's for</a></li>
+    </ul>
+    <div class="nav-cta">
+      <a href="#waitlist" class="btn btn-primary">Join Waitlist</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-inner">
+      <div class="hero-content">
+        <div class="hero-badge">
+          <div class="hero-badge-dot"></div>
+          Now accepting waitlist applications
+        </div>
+        <h1>The operating system<br>for <em>service businesses.</em></h1>
+        <p class="hero-sub">Booking. Payments. Payroll. Banking. AI Receptionist. Profit intelligence. Everything in one place — so you can focus on your craft, not your admin.</p>
+        <div class="hero-actions">
+          <a href="#waitlist" class="btn btn-blush btn-xl">Join the Waitlist →</a>
+          <a href="#features" class="btn btn-ghost btn-lg">See how it works</a>
+        </div>
+        <div class="hero-trust">
+          <span class="hero-trust-item">No credit card required</span>
+          <span class="hero-trust-dot"></span>
+          <span class="hero-trust-item">14-day free trial</span>
+          <span class="hero-trust-dot"></span>
+          <span class="hero-trust-item">Cancel anytime</span>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <!-- Floating badge 1 -->
+        <div class="hero-float hero-float-1">
+          <div class="hero-float-icon">🤖</div>
+          <div class="hero-float-title">AI Receptionist</div>
+          <div class="hero-float-sub">Booked 11 appts overnight</div>
+        </div>
+
+        <!-- Main card -->
+        <div class="hero-card">
+          <div class="hero-card-header">
+            <div class="hero-card-title">Today's Revenue</div>
+            <div style="font-size:12px;color:var(--teal);font-weight:500;">● Live</div>
+          </div>
+          <div class="hero-revenue">$4,230</div>
+          <div class="hero-revenue-label">↑ 12% vs yesterday · 41 appointments</div>
+
+          <div class="hero-target">
+            <div class="hero-target-label">Income Target Progress</div>
+            <div class="hero-target-bar"><div class="hero-target-fill"></div></div>
+            <div class="hero-target-stat">
+              <span>$4,230 today</span>
+              <span style="color:var(--teal);font-weight:500;">73% of daily goal</span>
+            </div>
+          </div>
+
+          <div style="margin-top:20px;">
+            <div style="font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:0.5px;color:var(--text-muted);margin-bottom:12px;">Commission This Period</div>
+            <div class="hero-staff-row">
+              <div>
+                <div class="hero-staff-name">Jennifer M.</div>
+                <div style="font-size:12px;color:var(--text-muted);">Commission (45%)</div>
+              </div>
+              <div style="text-align:right;">
+                <div class="hero-staff-commission">$1,658</div>
+                <div class="hero-staff-tag">On track</div>
+              </div>
+            </div>
+            <div class="hero-staff-row">
+              <div>
+                <div class="hero-staff-name">Marcus J.</div>
+                <div style="font-size:12px;color:var(--text-muted);">Booth Rent</div>
+              </div>
+              <div style="text-align:right;">
+                <div class="hero-staff-commission">$400 collected</div>
+              </div>
+            </div>
+            <div class="hero-staff-row">
+              <div>
+                <div class="hero-staff-name">Lisa C.</div>
+                <div style="font-size:12px;color:var(--text-muted);">W2 Hourly + Tips</div>
+              </div>
+              <div style="text-align:right;">
+                <div class="hero-staff-commission">$678</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Floating badge 2 -->
+        <div class="hero-float hero-float-2">
+          <div class="hero-float-icon">💰</div>
+          <div class="hero-float-title">Payroll sent</div>
+          <div class="hero-float-sub">$8,420 disbursed to 6 staff</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PAIN -->
+<section class="pain">
+  <div class="container">
+    <div class="section-label">Sound familiar?</div>
+    <h2 class="section-title">Running a service business is <em>hard enough.</em></h2>
+    <p class="section-sub">You're great at what you do. But between appointments, staff, admin, and finances — the numbers feel like guesswork and the tools never talk to each other.</p>
+
+    <div class="pain-grid">
+      <div class="pain-item">
+        <div class="pain-number">01</div>
+        <div class="pain-title">Five apps, zero clarity</div>
+        <div class="pain-body">Booking in one app. Payments in another. Payroll in a spreadsheet. QuickBooks technically connected but untouched for months. It's chaos.</div>
+      </div>
+      <div class="pain-item">
+        <div class="pain-number">02</div>
+        <div class="pain-title">Revenue isn't profit</div>
+        <div class="pain-body">Your system tells you how much came in. It doesn't tell you what's left after product costs, staff, rent, and supplies. You're guessing your margin.</div>
+      </div>
+      <div class="pain-item">
+        <div class="pain-number">03</div>
+        <div class="pain-title">Your AI receptionist is voicemail</div>
+        <div class="pain-body">40% of appointment bookings happen after hours. If you're not answering, someone else is getting that client. A missed call is a missed appointment.</div>
+      </div>
+      <div class="pain-item">
+        <div class="pain-number">04</div>
+        <div class="pain-title">Commission math is a nightmare</div>
+        <div class="pain-body">End of week: who did what, who gets what percent, who sold retail, who's on booth rent, who's W2. Two hours of math that should be automatic.</div>
+      </div>
+      <div class="pain-item">
+        <div class="pain-number">05</div>
+        <div class="pain-title">No-shows are bleeding you</div>
+        <div class="pain-body">Clients who cancel last minute or don't show up at all. No deposit collected. Chair empty. Revenue gone. And you had to text three times just to confirm.</div>
+      </div>
+      <div class="pain-item">
+        <div class="pain-number">06</div>
+        <div class="pain-title">Growth feels like guessing</div>
+        <div class="pain-body">You want to expand. Maybe a second location. But you don't actually know your profit margins, your break-even, or what your business needs to earn per hour.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section id="features">
+  <div class="container">
+    <div class="section-label">What Kasse does</div>
+    <h2 class="section-title">Every tool your business needs, <em>finally connected.</em></h2>
+    <p class="section-sub">Built from the ground up for service businesses. Not a generic SaaS with a salon skin — a real operating system that understands how your business actually works.</p>
+  </div>
+</section>
+
+<!-- Feature 1: Profit Intelligence -->
+<section style="padding-top:0;padding-bottom:80px;">
+  <div class="container">
+    <div class="features-grid">
+      <div class="feature-visual fade-up">
+        <div class="feature-visual-header">
+          <div class="feature-visual-dot"></div>
+          <div class="feature-visual-dot"></div>
+          <div class="feature-visual-dot"></div>
+          <span class="feature-visual-title">Service Profitability</span>
+        </div>
+        <div class="feature-visual-body">
+          <div style="font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:0.5px;color:var(--text-muted);margin-bottom:12px;display:flex;justify-content:space-between;">
+            <span>Service</span><span>Revenue</span><span>Margin</span>
+          </div>
+          <div class="profit-row">
+            <div><div class="profit-service">Balayage</div><div class="profit-revenue">$180 · 2.5 hr</div></div>
+            <div class="profit-margin high">58%</div>
+          </div>
+          <div class="profit-row">
+            <div><div class="profit-service">Root Touch-Up</div><div class="profit-revenue">$95 · 1.5 hr</div></div>
+            <div class="profit-margin high">62%</div>
+          </div>
+          <div class="profit-row">
+            <div><div class="profit-service">Color Correction</div><div class="profit-revenue">$280 · 4 hr</div></div>
+            <div class="profit-margin mid">41%</div>
+          </div>
+          <div class="profit-row">
+            <div><div class="profit-service">Keratin Treatment</div><div class="profit-revenue">$220 · 3 hr</div></div>
+            <div class="profit-margin low">27%</div>
+          </div>
+
+          <div class="alert-card">
+            <div class="alert-icon">💡</div>
+            <div>
+              <div class="alert-title">Pricing alert — Keratin Treatment</div>
+              <div class="alert-body">At your income target, this service should be priced at $268. Currently $220 (27% margin).</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="feature-content fade-up">
+        <div class="feature-tag">Profit Intelligence</div>
+        <h3>Know what every service <em>actually</em> makes you.</h3>
+        <p>Most software shows revenue. Kasse shows profit. We calculate true margin on every service — factoring in product cost, staff time, and your income goals. Then we tell you exactly what to charge to hit them.</p>
+        <ul class="feature-bullets">
+          <li><div class="feature-bullet-check"></div>Profit per service and profit per hour — not just revenue</li>
+          <li><div class="feature-bullet-check"></div>Income target calculator: set your personal + business goals, Kasse shows what you need to earn per hour</li>
+          <li><div class="feature-bullet-check"></div>Smart pricing alerts when a service falls below your target margin</li>
+          <li><div class="feature-bullet-check"></div>Three-tier reporting: Simple, Intermediate, or Advanced — your choice</li>
+          <li><div class="feature-bullet-check"></div>Growth Journal: AI-generated log of every insight, win, and recommendation</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Feature 2: Appointments -->
+<section style="padding-top:0;padding-bottom:80px;background:var(--cream);">
+  <div class="container" style="padding-top:80px;">
+    <div class="features-grid reverse">
+      <div class="feature-content fade-up">
+        <div class="feature-tag">Appointments & Scheduling</div>
+        <h3>Your calendar runs <em>itself.</em></h3>
+        <p>Book, confirm, remind, check in, rebook — all automatic. The AI Receptionist handles calls after hours. Smart breaks schedule around appointments. Public holidays are pre-loaded. No-show risk alerts fire before the appointment, not after.</p>
+        <ul class="feature-bullets">
+          <li><div class="feature-bullet-check"></div>AI Receptionist answers every call 24/7 — books, reschedules, answers FAQs</li>
+          <li><div class="feature-bullet-check"></div>Cancellation risk alerts before a no-show happens</li>
+          <li><div class="feature-bullet-check"></div>Texas + federal public holidays pre-loaded — one-click close</li>
+          <li><div class="feature-bullet-check"></div>Smart breaks scheduled around appointments, not the other way around</li>
+          <li><div class="feature-bullet-check"></div>VIP clients auto-exempted from deposit requirements</li>
+          <li><div class="feature-bullet-check"></div>Walk-in queue with digital TV board (barbershop mode)</li>
+        </ul>
+      </div>
+
+      <div class="feature-visual fade-up">
+        <div class="feature-visual-header">
+          <div class="feature-visual-dot"></div>
+          <div class="feature-visual-dot"></div>
+          <div class="feature-visual-dot"></div>
+          <span class="feature-visual-title">Today's Calendar — Jennifer M.</span>
+        </div>
+        <div class="feature-visual-body">
+          <div class="schedule-slot">
+            <div class="schedule-time">9:00</div>
+            <div class="schedule-block confirmed">
+              <div class="schedule-client">Sarah Johnson ⚠️ High no-show risk</div>
+              <div class="schedule-service">Balayage + Toner · 2.5 hr · $225</div>
+            </div>
+          </div>
+          <div class="schedule-slot">
+            <div class="schedule-time">11:30</div>
+            <div class="schedule-block confirmed">
+              <div class="schedule-client">Maria Garcia</div>
+              <div class="schedule-service">Root Touch-Up · 1.5 hr · $95</div>
+            </div>
+          </div>
+          <div class="schedule-slot">
+            <div class="schedule-time">1:00</div>
+            <div class="schedule-block open">
+              <div class="schedule-client" style="color:var(--text-muted);font-style:italic;">Smart break · 30 min</div>
+            </div>
+          </div>
+          <div class="schedule-slot">
+            <div class="schedule-time">1:30</div>
+            <div class="schedule-block pending">
+              <div class="schedule-client">New Client · Unconfirmed</div>
+              <div class="schedule-service">Cut + Blowdry · 1 hr · $75</div>
+            </div>
+          </div>
+          <div class="schedule-slot">
+            <div class="schedule-time">3:00</div>
+            <div class="schedule-block confirmed">
+              <div class="schedule-client">Amanda K. · VIP 🌟</div>
+              <div class="schedule-service">Color Correction · 3 hr · $280</div>
+            </div>
+          </div>
+          <div style="margin-top:16px;padding:12px 14px;background:rgba(66,151,160,0.08);border-radius:var(--r-sm);border:1px solid rgba(66,151,160,0.15);font-size:12px;color:var(--teal);">
+            🤖 AI Receptionist booked Amanda's 3pm while you were with your 9am client.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Feature 3: Payroll -->
+<section style="padding-top:80px;padding-bottom:80px;">
+  <div class="container">
+    <div class="features-grid">
+      <div class="feature-visual fade-up">
+        <div class="feature-visual-header">
+          <div class="feature-visual-dot"></div>
+          <div class="feature-visual-dot"></div>
+          <div class="feature-visual-dot"></div>
+          <span class="feature-visual-title">Payroll — May 1–15, 2026</span>
+        </div>
+        <div class="feature-visual-body">
+          <div class="payroll-row">
+            <div class="payroll-staff">
+              <div class="payroll-avatar">JM</div>
+              <div>
+                <div class="payroll-name">Jennifer Martinez</div>
+                <div class="payroll-type">Commission 45% · W2</div>
+              </div>
+            </div>
+            <div class="payroll-amount">$1,658</div>
+          </div>
+          <div class="payroll-row">
+            <div class="payroll-staff">
+              <div class="payroll-avatar" style="background:var(--blush-light);color:var(--blush-dark);">MJ</div>
+              <div>
+                <div class="payroll-name">Marcus Johnson</div>
+                <div class="payroll-type">Booth Rent · Collected</div>
+              </div>
+            </div>
+            <div class="payroll-amount" style="color:var(--text-muted);">-$400</div>
+          </div>
+          <div class="payroll-row">
+            <div class="payroll-staff">
+              <div class="payroll-avatar" style="background:#E8F7F1;color:#1A6B4A;">LC</div>
+              <div>
+                <div class="payroll-name">Lisa Chen</div>
+                <div class="payroll-type">W2 Hourly · 42 hrs</div>
+              </div>
+            </div>
+            <div class="payroll-amount">$678</div>
+          </div>
+          <div class="payroll-row">
+            <div class="payroll-staff">
+              <div class="payroll-avatar" style="background:#F9ECED;color:#C45A5F;">AW</div>
+              <div>
+                <div class="payroll-name">Ashley Williams</div>
+                <div class="payroll-type">1099 Commission</div>
+              </div>
+            </div>
+            <div class="payroll-amount">$1,090</div>
+          </div>
+          <div style="border-top:2px solid var(--border);margin-top:16px;padding-top:16px;display:flex;justify-content:space-between;align-items:center;">
+            <div style="font-size:14px;font-weight:600;color:var(--text);">Total Payroll</div>
+            <div style="font-size:20px;font-weight:600;color:var(--brand);">$3,026</div>
+          </div>
+          <div style="margin-top:16px;">
+            <button style="width:100%;height:44px;background:var(--brand);color:white;border:none;border-radius:var(--r-sm);font-family:'DM Sans',sans-serif;font-size:14px;font-weight:500;cursor:pointer;">Approve & Disburse via Wise →</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="feature-content fade-up">
+        <div class="feature-tag">Payroll & HCM</div>
+        <h3>Every type of employee, <em>handled automatically.</em></h3>
+        <p>W2 employees. 1099 commission stylists. Booth renters. Hybrid models. Kasse calculates commissions, tracks hours, deducts booth rent via ACH, handles tax withholding, and disburses via Wise — all in one place.</p>
+        <ul class="feature-bullets">
+          <li><div class="feature-bullet-check"></div>Commission auto-calculated per transaction — flat %, tiered, or per-service</li>
+          <li><div class="feature-bullet-check"></div>W2 tax withholding (federal + state + FICA) calculated automatically</li>
+          <li><div class="feature-bullet-check"></div>Booth rent collected via ACH on your schedule — no chasing</li>
+          <li><div class="feature-bullet-check"></div>Direct deposit via Wise API — staff get paid on time, automatically</li>
+          <li><div class="feature-bullet-check"></div>Kasse Tax Service: quarterly 941, year-end W2/1099-NEC filing ($49/mo addon)</li>
+          <li><div class="feature-bullet-check"></div>Staff see their own earnings in real time — no more "how much do I make?" questions</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<section class="stats">
+  <div class="container">
+    <div style="text-align:center;max-width:640px;margin:0 auto;">
+      <div class="section-label">The numbers</div>
+      <h2 class="section-title">Built for businesses that <em>want to grow.</em></h2>
+    </div>
+
+    <div class="stats-grid">
+      <div class="stat-item">
+        <div class="stat-number">$250K+</div>
+        <div class="stat-label">Average funded graduation prize for top incubator graduates</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">40%</div>
+        <div class="stat-label">Of appointment bookings happen after hours — the AI Receptionist captures all of them</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">6</div>
+        <div class="stat-label">Apps the average salon owner uses that Kasse replaces with one</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">$0</div>
+        <div class="stat-label">Cost to apply to the Founders Program — 25 spots per cohort</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INCUBATOR -->
+<section class="incubator" id="incubator">
+  <div class="container">
+    <div class="incubator-inner">
+      <div>
+        <div class="section-label">Kasse Founders Program</div>
+        <h2 class="section-title">We invest in you. You build the business. <em>Everyone wins.</em></h2>
+        <p class="section-sub" style="margin-bottom:0;">The Kasse Founders Program is a 12-week accelerator for service business owners. Real education. Real capital access. Real stakes. Top graduates receive a fully structured second location package worth $250,000+.</p>
+
+        <div class="incubator-steps">
+          <div class="incubator-step">
+            <div class="step-num">1</div>
+            <div>
+              <div class="step-title">Apply — free, takes 20 minutes</div>
+              <div class="step-body">Tell us about your business, your biggest challenge, and where you want to go. Every application reviewed personally. 25 spots per cohort.</div>
+            </div>
+          </div>
+          <div class="incubator-step">
+            <div class="step-num">2</div>
+            <div>
+              <div class="step-title">Get accepted + onboard to Kasse</div>
+              <div class="step-body">If selected, you join your cohort and get your business running on Kasse. The platform becomes your curriculum tool — every lesson implemented in real time.</div>
+            </div>
+          </div>
+          <div class="incubator-step">
+            <div class="step-num">3</div>
+            <div>
+              <div class="step-title">12 weeks of vertical-specific education</div>
+              <div class="step-body">Weekly sessions on pricing, team management, marketing, expansion planning — all using data from your own Kasse dashboard. Peer network of 24 operators in your industry.</div>
+            </div>
+          </div>
+          <div class="incubator-step">
+            <div class="step-num">4</div>
+            <div>
+              <div class="step-title">Graduate and grow</div>
+              <div class="step-body">Top graduate gets the funded second location. All graduates get lifetime benefits, capital line access, and the alumni network.</div>
+            </div>
+          </div>
+        </div>
+
+        <div style="margin-top:40px;">
+          <a href="#waitlist" class="btn btn-blush btn-lg">Apply for Cohort 1 →</a>
+          <div style="font-size:13px;color:rgba(255,255,255,0.45);margin-top:12px;">Applications close August 1, 2026 · Beauty & Personal Services · Corpus Christi + San Antonio focus</div>
+        </div>
+      </div>
+
+      <div>
+        <div class="incubator-prize">
+          <div class="prize-eyebrow">Top Graduate Prize</div>
+          <div class="prize-title">A funded<br>second location.</div>
+          <div class="prize-sub">A fully structured expansion financing package — worth $250,000+. This is not a grant. This is a career-changing partnership.</div>
+
+          <div class="prize-items">
+            <div class="prize-item"><div class="prize-check"></div>SBA 7(a) loan facilitation ($150K–$200K)</div>
+            <div class="prize-item"><div class="prize-check"></div>Kasse Capital growth financing ($50K–$75K)</div>
+            <div class="prize-item"><div class="prize-check"></div>Equipment financing ($30K–$50K)</div>
+            <div class="prize-item"><div class="prize-check"></div>Buildout support through partner contractor</div>
+          </div>
+
+          <div class="prize-divider"></div>
+
+          <div class="prize-also">Every graduate receives:</div>
+          <div class="prize-also-items">
+            <div class="prize-also-item"><div class="prize-also-dot"></div>Kasse Growth plan free for life ($1,188/year value)</div>
+            <div class="prize-also-item"><div class="prize-also-dot"></div>Processing rate reduction — lifetime</div>
+            <div class="prize-also-item"><div class="prize-also-dot"></div>Capital line access at graduation</div>
+            <div class="prize-also-item"><div class="prize-also-dot"></div>Alumni network + annual conference</div>
+            <div class="prize-also-item"><div class="prize-also-dot"></div>Priority support for life</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VERTICALS -->
+<section id="verticals">
+  <div class="container">
+    <div style="text-align:center;max-width:640px;margin:0 auto;">
+      <div class="section-label">Built for your business</div>
+      <h2 class="section-title">Works for <em>any</em> service business.</h2>
+      <p class="section-sub" style="margin:0 auto;">Every vertical gets its own portal configuration, terminology, default services, and dashboard layout. Kasse knows what a salon looks like. And what a barbershop needs. And what a gym runs on.</p>
+    </div>
+
+    <div class="verticals-grid fade-up">
+      <div class="vertical-card">
+        <div class="vertical-icon">✂️</div>
+        <div class="vertical-name">Hair Salons</div>
+        <div class="vertical-desc">Formula cards, color studio, TDLR license tracking, commission stylists</div>
+      </div>
+      <div class="vertical-card">
+        <div class="vertical-icon">💈</div>
+        <div class="vertical-name">Barbershops</div>
+        <div class="vertical-desc">Walk-in queue, TV board display, booth rent billing, hybrid booking</div>
+      </div>
+      <div class="vertical-card">
+        <div class="vertical-icon">💅</div>
+        <div class="vertical-name">Nail Salons</div>
+        <div class="vertical-desc">Queue system, nail art gallery, MSDS log, walk-in + appointment hybrid</div>
+      </div>
+      <div class="vertical-card">
+        <div class="vertical-icon">🏋️</div>
+        <div class="vertical-name">Gyms & Fitness</div>
+        <div class="vertical-desc">Member check-in, class scheduling, PT logging, corporate accounts</div>
+      </div>
+      <div class="vertical-card">
+        <div class="vertical-icon">🧘</div>
+        <div class="vertical-name">Massage & Wellness</div>
+        <div class="vertical-desc">Intake forms, room management, membership billing, wellness scheduling</div>
+      </div>
+      <div class="vertical-card">
+        <div class="vertical-icon">🍽️</div>
+        <div class="vertical-name">Restaurants</div>
+        <div class="vertical-desc">Kitchen display, floor plan, online ordering, DoorDash + Uber Eats unified</div>
+      </div>
+      <div class="vertical-card">
+        <div class="vertical-icon">🐾</div>
+        <div class="vertical-name">Pet Grooming</div>
+        <div class="vertical-desc">Pet profiles, vaccination tracking, drop-off board, owner photo updates</div>
+      </div>
+      <div class="vertical-card">
+        <div class="vertical-icon">🚗</div>
+        <div class="vertical-name">Auto Detailing</div>
+        <div class="vertical-desc">Vehicle profiles, VIN lookup, step-by-step tech checklists, fleet accounts</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials">
+  <div class="container">
+    <div style="text-align:center;max-width:640px;margin:0 auto;">
+      <div class="section-label">Early access</div>
+      <h2 class="section-title">What early users are saying.</h2>
+    </div>
+
+    <div class="testimonials-grid fade-up">
+      <div class="testimonial-card">
+        <div class="testimonial-stars">
+          <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
+        </div>
+        <div class="testimonial-quote">"I used to spend Sunday nights figuring out commissions. Now Kasse does it automatically. I actually took a real day off last week for the first time in three years."</div>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">JR</div>
+          <div>
+            <div class="testimonial-name">Jennifer R.</div>
+            <div class="testimonial-biz">Luxe Hair Studio · Corpus Christi, TX</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="testimonial-stars">
+          <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
+        </div>
+        <div class="testimonial-quote">"The AI Receptionist booked 11 appointments while I slept last month. That's $2,200 I would have completely missed. The thing doesn't take sick days either."</div>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar" style="background:var(--brand);color:white;">MC</div>
+          <div>
+            <div class="testimonial-name">Marcus C.</div>
+            <div class="testimonial-biz">Sharp Cuts Barbershop · San Antonio, TX</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="testimonial-stars">
+          <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
+        </div>
+        <div class="testimonial-quote">"The profit-per-service report changed how I run my menu. I found out my keratin treatments were barely profitable after product costs. Raised the price. Nobody left."</div>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar" style="background:var(--blush-light);color:var(--blush-dark);">AS</div>
+          <div>
+            <div class="testimonial-name">Amanda S.</div>
+            <div class="testimonial-biz">Studio A Salon · Austin, TX</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section id="pricing">
+  <div class="container">
+    <div style="text-align:center;max-width:640px;margin:0 auto;">
+      <div class="section-label">Pricing</div>
+      <h2 class="section-title">Simple pricing that <em>grows with you.</em></h2>
+      <p class="section-sub" style="margin:0 auto;">Start free. Add what you need. Never pay for features you don't use. All plans include Kasse Pay processing at flat-rate 2.9% + $0.30.</p>
+    </div>
+
+    <div class="pricing-grid">
+      <div class="pricing-card">
+        <div class="pricing-plan">Starter</div>
+        <div class="pricing-price"><sup>$</sup>49<sub>/mo</sub></div>
+        <div class="pricing-desc">For independent operators ready to stop guessing and start running their business properly.</div>
+        <ul class="pricing-features">
+          <li><div class="pricing-check"></div>1 location · 5 staff</li>
+          <li><div class="pricing-check"></div>Appointments + online booking</li>
+          <li><div class="pricing-check"></div>Full POS + Kasse Pay</li>
+          <li><div class="pricing-check"></div>Client CRM + relationship scores</li>
+          <li><div class="pricing-check"></div>Commission tracking</li>
+          <li><div class="pricing-check"></div>Basic reports</li>
+          <li><div class="pricing-check"></div>AI business coach</li>
+        </ul>
+        <a href="#waitlist" class="btn btn-ghost" style="width:100%;justify-content:center;">Join Waitlist</a>
+      </div>
+
+      <div class="pricing-card featured">
+        <div class="pricing-popular">Most Popular</div>
+        <div class="pricing-plan">Growth</div>
+        <div class="pricing-price"><sup>$</sup>99<sub>/mo</sub></div>
+        <div class="pricing-desc">For growing teams who want real profit intelligence and marketing automation built in.</div>
+        <ul class="pricing-features">
+          <li><div class="pricing-check"></div>3 locations · 15 staff</li>
+          <li><div class="pricing-check"></div>Everything in Starter</li>
+          <li><div class="pricing-check"></div>Profit per service + income target</li>
+          <li><div class="pricing-check"></div>Smart pricing recommendations</li>
+          <li><div class="pricing-check"></div>Marketing campaigns + automation</li>
+          <li><div class="pricing-check"></div>Win-back + review automation</li>
+          <li><div class="pricing-check"></div>Growth Journal (AI coaching log)</li>
+          <li><div class="pricing-check"></div>Staff KPI tracking</li>
+        </ul>
+        <a href="#waitlist" class="btn btn-primary" style="width:100%;justify-content:center;">Join Waitlist</a>
+      </div>
+
+      <div class="pricing-card">
+        <div class="pricing-plan">Pro</div>
+        <div class="pricing-price"><sup>$</sup>179<sub>/mo</sub></div>
+        <div class="pricing-desc">For multi-location businesses ready to scale with AI, payroll, and banking in one system.</div>
+        <ul class="pricing-features">
+          <li><div class="pricing-check"></div>5 locations · 30 staff</li>
+          <li><div class="pricing-check"></div>Everything in Growth</li>
+          <li><div class="pricing-check"></div>AI Receptionist (200 calls/mo)</li>
+          <li><div class="pricing-check"></div>Payroll (all employee types)</li>
+          <li><div class="pricing-check"></div>Kasse Banking + Bill Pay</div></li>
+          <li><div class="pricing-check"></div>Kasse Tax Service</li>
+          <li><div class="pricing-check"></div>Business health dashboard</li>
+          <li><div class="pricing-check"></div>Franchise tools (addon)</li>
+        </ul>
+        <a href="#waitlist" class="btn btn-ghost" style="width:100%;justify-content:center;">Join Waitlist</a>
+      </div>
+    </div>
+
+    <div style="text-align:center;margin-top:32px;font-size:14px;color:var(--text-muted);">
+      All plans include a 14-day free trial. No credit card required. Annual plans save 20%. <br>
+      <a href="#waitlist" style="color:var(--brand);font-weight:500;">Enterprise pricing available</a> for multi-location chains and franchise systems.
+    </div>
+  </div>
+</section>
+
+<!-- WAITLIST -->
+<section class="waitlist" id="waitlist">
+  <div class="container">
+    <div class="waitlist-inner">
+      <div class="section-label" style="justify-content:center;">Early access</div>
+      <h2>Be first. <em>Get more.</em></h2>
+      <p class="waitlist-sub">Waitlist members get 3 months free on any paid plan, early access to the Founders Program, and a dedicated onboarding call. We're launching in Texas first.</p>
+
+      <form class="waitlist-form" id="waitlist-form">
+        <input type="email" class="waitlist-input" placeholder="your@email.com" required id="waitlist-email">
+        <button type="submit" class="btn btn-blush btn-lg" style="height:52px;">Join Waitlist →</button>
+      </form>
+
+      <div class="waitlist-success" id="waitlist-success">
+        <div class="waitlist-success-icon">✓</div>
+        <div class="waitlist-success-title">You're on the list.</div>
+        <div class="waitlist-success-sub">We'll be in touch before anyone else. Watch your inbox.</div>
+      </div>
+
+      <div class="waitlist-note">No spam. No pressure. Just early access to the platform built for your business.</div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <span class="footer-logo">kasse<span>.</span></span>
+        <p class="footer-tagline">The operating system for service businesses. Booking. Payments. Payroll. Banking. AI Receptionist. All in one.</p>
+        <div style="font-size:13px;color:rgba(255,255,255,0.35);">Corpus Christi, Texas · 36 West Holdings</div>
+      </div>
+
+      <div>
+        <div class="footer-col-title">Product</div>
+        <ul class="footer-links">
+          <li><a href="#features">Features</a></li>
+          <li><a href="#pricing">Pricing</a></li>
+          <li><a href="#incubator">Founders Program</a></li>
+          <li><a href="#verticals">Verticals</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <div class="footer-col-title">Company</div>
+        <ul class="footer-links">
+          <li><a href="#">About</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="mailto:hello@kasseapp.com">Contact</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <div class="footer-col-title">Legal</div>
+        <ul class="footer-links">
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Service</a></li>
+          <li><a href="#">Processing Agreement</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="footer-copy">© 2026 Kasse Platform LLC · All rights reserved</div>
+      <div class="footer-powered">Payments powered by Kasse Pay</div>
+    </div>
+  </div>
+</footer>
+
+<script>
+// Waitlist form
+document.getElementById('waitlist-form').addEventListener('submit', function(e) {
+  e.preventDefault();
+  const email = document.getElementById('waitlist-email').value;
+  if (!email) return;
+
+  // In production this hits the API. For now show success state.
+  document.getElementById('waitlist-form').style.display = 'none';
+  const success = document.getElementById('waitlist-success');
+  success.style.display = 'flex';
+
+  // Would POST to /api/waitlist with { email }
+  console.log('Waitlist signup:', email);
+});
+
+// Intersection observer for fade-up animations
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    }
+  });
+}, { threshold: 0.1 });
+
+document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+// Smooth scroll for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(link => {
+  link.addEventListener('click', e => {
+    e.preventDefault();
+    const target = document.querySelector(link.getAttribute('href'));
+    if (target) {
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  });
+});
+
+// Nav scroll effect
+window.addEventListener('scroll', () => {
+  const nav = document.querySelector('nav');
+  if (window.scrollY > 20) {
+    nav.style.boxShadow = '0 2px 20px rgba(47,80,97,0.10)';
+  } else {
+    nav.style.boxShadow = 'none';
+  }
+});
+
+// Animate hero revenue counter
+function animateCounter(element, target, duration) {
+  let start = 0;
+  const increment = target / (duration / 16);
+  const timer = setInterval(() => {
+    start += increment;
+    if (start >= target) {
+      start = target;
+      clearInterval(timer);
+    }
+    element.textContent = '$' + Math.floor(start).toLocaleString();
+  }, 16);
+}
+
+window.addEventListener('load', () => {
+  const revenueEl = document.querySelector('.hero-revenue');
+  if (revenueEl) {
+    setTimeout(() => animateCounter(revenueEl, 4230, 1500), 500);
+  }
+});
+</script>
+
+</body>
+</html>
