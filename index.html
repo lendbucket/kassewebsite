@@ -4,8 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Kasse — The Operating System for Service Businesses</title>
-<meta name="description" content="Kasse combines booking, payments, payroll, banking, and AI into one platform built for salons, barbershops, gyms, and every service business. Join the waitlist — launching in Texas.">
-<meta name="keywords" content="salon software, barbershop software, service business software, salon payroll, salon booking app, AI receptionist for salons, salon management platform">
+<meta name="description" content="Kasse combines booking, payments, payroll, banking, and AI into one platform built for salons, barbershops, gyms, and every service business. Join the waitlist — launching nationwide across the USA.">
+<meta name="keywords" content="service business software, salon software, barbershop software, gym management software, restaurant software, spa software, appointment scheduling software, service business POS, small business management software, AI receptionist for small business, service business payroll, profit intelligence software">
 <meta name="robots" content="index, follow">
 <meta name="author" content="Kasse Platform LLC">
 <link rel="canonical" href="https://joinkasse.com">
@@ -19,7 +19,21 @@
 <meta name="twitter:title" content="Kasse — The Operating System for Service Businesses">
 <meta name="twitter:description" content="Booking. Payments. Payroll. Banking. AI Receptionist. All in one.">
 <meta name="twitter:image" content="https://joinkasse.com/og-image.png">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+{"@type":"SoftwareApplication","name":"Kasse","applicationCategory":"BusinessApplication","operatingSystem":"Web, iOS, Android","description":"The all-in-one operating system for service businesses. Booking, payments, payroll, banking, AI Receptionist, and profit intelligence in one platform.","url":"https://joinkasse.com","offers":[{"@type":"Offer","name":"Starter","price":"49","priceCurrency":"USD"},{"@type":"Offer","name":"Growth","price":"99","priceCurrency":"USD"},{"@type":"Offer","name":"Pro","price":"179","priceCurrency":"USD"}],"publisher":{"@type":"Organization","name":"Kasse Platform LLC","url":"https://joinkasse.com","contactPoint":{"@type":"ContactPoint","email":"hello@kasseapp.com","contactType":"customer service"}}},
+{"@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"What businesses does Kasse work for?","acceptedAnswer":{"@type":"Answer","text":"Kasse works for any appointment-based service business including hair salons, barbershops, nail salons, gyms, fitness studios, restaurants, spas, massage studios, pet groomers, auto detailers, and more."}},
+{"@type":"Question","name":"Does Kasse handle booth rent?","acceptedAnswer":{"@type":"Answer","text":"Yes. Kasse automatically collects booth rent via ACH on your schedule from booth renters' bank accounts. No manual invoicing, no chasing payments."}},
+{"@type":"Question","name":"Does Kasse include payroll?","acceptedAnswer":{"@type":"Answer","text":"Yes. Kasse handles W2 employees, 1099 commission contractors, booth renters, and hybrid models. Commission is calculated automatically from every transaction. Payroll disburses via Wise ACH."}},
+{"@type":"Question","name":"What is the Kasse Founders Program?","acceptedAnswer":{"@type":"Answer","text":"The Kasse Founders Program is a 12-week business accelerator for service business owners. 25 spots per cohort. Top graduate receives a funded second location package worth $250,000+. All graduates receive lifetime Kasse benefits."}}
+]}
+]}
+</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Kasse","applicationCategory":"BusinessApplication","description":"The operating system for service businesses.","url":"https://joinkasse.com","offers":[{"@type":"Offer","name":"Starter","price":"49","priceCurrency":"USD"},{"@type":"Offer","name":"Growth","price":"99","priceCurrency":"USD"},{"@type":"Offer","name":"Pro","price":"179","priceCurrency":"USD"}],"publisher":{"@type":"Organization","name":"Kasse Platform LLC","address":{"@type":"PostalAddress","addressLocality":"Corpus Christi","addressRegion":"TX","addressCountry":"US"}}}</script>
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon.svg">
+<link rel="apple-touch-icon" href="/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -378,10 +392,31 @@ footer{background:var(--brand-dk);padding:64px 0 36px}
   <div class="nav-inner">
     <a href="/" class="nav-logo" aria-label="Kasse home"><img src="/logo.png.png" alt="Kasse" width="120" height="30"></a>
     <ul class="nav-links">
-      <li><a href="#features">Features</a></li>
+      <li style="position:relative"><a href="/industries/" id="ind-toggle">Industries ▾</a>
+        <div id="ind-menu" style="display:none;position:absolute;top:100%;left:50%;transform:translateX(-50%);background:#1C3040;border:1px solid rgba(255,255,255,.10);border-radius:12px;padding:12px;min-width:200px;margin-top:8px;box-shadow:0 16px 40px rgba(0,0,0,.3);z-index:100">
+          <a style="display:block;padding:8px 12px;font-size:13px;color:rgba(255,255,255,.65);border-radius:6px" href="/industries/salons.html">Hair Salons</a>
+          <a style="display:block;padding:8px 12px;font-size:13px;color:rgba(255,255,255,.65);border-radius:6px" href="/industries/barbershops.html">Barbershops</a>
+          <a style="display:block;padding:8px 12px;font-size:13px;color:rgba(255,255,255,.65);border-radius:6px" href="/industries/nail-salons.html">Nail Salons</a>
+          <a style="display:block;padding:8px 12px;font-size:13px;color:rgba(255,255,255,.65);border-radius:6px" href="/industries/gyms.html">Gyms &amp; Fitness</a>
+          <a style="display:block;padding:8px 12px;font-size:13px;color:rgba(255,255,255,.65);border-radius:6px" href="/industries/restaurants.html">Restaurants</a>
+          <a style="display:block;padding:8px 12px;font-size:13px;color:rgba(255,255,255,.65);border-radius:6px" href="/industries/spas.html">Spas &amp; Wellness</a>
+          <a style="display:block;padding:8px 12px;font-size:13px;color:rgba(255,255,255,.65);border-radius:6px" href="/industries/pet-grooming.html">Pet Grooming</a>
+          <a style="display:block;padding:8px 12px;font-size:13px;color:rgba(255,255,255,.65);border-radius:6px" href="/industries/auto-detailing.html">Auto Detailing</a>
+        </div>
+      </li>
+      <li style="position:relative"><a href="/solutions/" id="sol-toggle">Solutions ▾</a>
+        <div id="sol-menu" style="display:none;position:absolute;top:100%;left:50%;transform:translateX(-50%);background:#1C3040;border:1px solid rgba(255,255,255,.10);border-radius:12px;padding:12px;min-width:210px;margin-top:8px;box-shadow:0 16px 40px rgba(0,0,0,.3);z-index:100">
+          <a style="display:block;padding:8px 12px;font-size:13px;color:rgba(255,255,255,.65);border-radius:6px" href="/solutions/appointments.html">Appointments &amp; Booking</a>
+          <a style="display:block;padding:8px 12px;font-size:13px;color:rgba(255,255,255,.65);border-radius:6px" href="/solutions/payments.html">Payments &amp; POS</a>
+          <a style="display:block;padding:8px 12px;font-size:13px;color:rgba(255,255,255,.65);border-radius:6px" href="/solutions/payroll.html">Payroll &amp; HCM</a>
+          <a style="display:block;padding:8px 12px;font-size:13px;color:rgba(255,255,255,.65);border-radius:6px" href="/solutions/banking.html">Banking &amp; Bill Pay</a>
+          <a style="display:block;padding:8px 12px;font-size:13px;color:rgba(255,255,255,.65);border-radius:6px" href="/solutions/ai-receptionist.html">AI Receptionist</a>
+          <a style="display:block;padding:8px 12px;font-size:13px;color:rgba(255,255,255,.65);border-radius:6px" href="/solutions/profit-intelligence.html">Profit Intelligence</a>
+          <a style="display:block;padding:8px 12px;font-size:13px;color:rgba(255,255,255,.65);border-radius:6px" href="/solutions/marketing.html">Marketing &amp; CRM</a>
+        </div>
+      </li>
       <li><a href="#pricing">Pricing</a></li>
       <li><a href="#incubator">Founders Program</a></li>
-      <li><a href="#verticals">Who it's for</a></li>
     </ul>
     <div class="nav-right">
       <a href="#founders-waitlist" class="btn btn-outline btn-sm">Apply to Founders Program</a>
@@ -396,7 +431,7 @@ footer{background:var(--brand-dk);padding:64px 0 36px}
   <div class="container">
     <div class="hero-inner">
       <div>
-        <div class="hero-badge"><div class="bdot" aria-hidden="true"></div>Now accepting waitlist — launching in Texas</div>
+        <div class="hero-badge"><div class="bdot" aria-hidden="true"></div>Now accepting waitlist — launching nationwide across the USA</div>
         <h1>The operating system<br>for <em>service businesses.</em></h1>
         <p class="hero-sub">Booking. Payments. Payroll. Banking. AI Receptionist. Profit intelligence. Everything in one place — so you can focus on your craft, not your admin.</p>
         <div class="hero-actions">
@@ -410,7 +445,7 @@ footer{background:var(--brand-dk);padding:64px 0 36px}
           <span class="ht-sep" aria-hidden="true"></span>
           <span class="ht-item">Cancel anytime</span>
           <span class="ht-sep" aria-hidden="true"></span>
-          <span class="ht-item">Launching Q3 2026</span>
+          <span class="ht-item">Nationwide Launch Q3 2026</span>
         </div>
       </div>
 
@@ -510,7 +545,7 @@ footer{background:var(--brand-dk);padding:64px 0 36px}
         <ul class="flist">
           <li><div class="fchk" aria-hidden="true"></div><span>AI Receptionist answers every inbound call — books, reschedules, answers FAQs, captures leads</span></li>
           <li><div class="fchk" aria-hidden="true"></div><span>Cancellation risk alerts fire before a no-show — one-tap personal reminder from your number</span></li>
-          <li><div class="fchk" aria-hidden="true"></div><span>Texas + federal holidays pre-loaded — one-click close, never block manually again</span></li>
+          <li><div class="fchk" aria-hidden="true"></div><span>US federal + state holidays pre-loaded — one-click close, never block manually again</span></li>
           <li><div class="fchk" aria-hidden="true"></div><span>Smart breaks scheduled around appointments — no more dead chair time from bad timing</span></li>
           <li><div class="fchk" aria-hidden="true"></div><span>VIP clients auto-exempted from deposit requirements based on relationship score</span></li>
           <li><div class="fchk" aria-hidden="true"></div><span>Walk-in queue with TV board display — built for barbershops and hybrid models</span></li>
@@ -817,7 +852,7 @@ footer{background:var(--brand-dk);padding:64px 0 36px}
     <div class="wlinner">
       <div class="eyebrow" style="justify-content:center"><span class="eline" aria-hidden="true"></span>Early Access</div>
       <h2 class="wlh">Be first. <em>Get more.</em></h2>
-      <p class="wlsub">Waitlist members get 3 months free on any paid plan, priority access to the Founders Program, and a dedicated onboarding call. Launching in Texas first — Q3 2026.</p>
+      <p class="wlsub">Waitlist members get 3 months free on any paid plan, priority access to the Founders Program, and a dedicated onboarding call. Launching Nationwide first — Q3 2026.</p>
       <form class="wlform" id="wl-form">
         <label for="wl-email" class="sr-only">Email address</label>
         <input type="email" class="wlinput" id="wl-email" placeholder="your@email.com" required autocomplete="email">
@@ -839,11 +874,29 @@ footer{background:var(--brand-dk);padding:64px 0 36px}
       <div>
         <img src="/logo.png.png" alt="Kasse" class="flogoimg" width="120" height="28">
         <p class="ftagline">The operating system for service businesses. Booking, payments, payroll, banking, and AI — all in one.</p>
-        <div class="fmeta">Corpus Christi, Texas · 36 West Holdings</div>
+        <div class="fmeta">Nationwide · 36 West Holdings</div>
       </div>
       <div>
-        <div class="fctitle">Product</div>
-        <ul class="flinks"><li><a href="#features">Features</a></li><li><a href="#pricing">Pricing</a></li><li><a href="#incubator">Founders Program</a></li><li><a href="#verticals">Verticals</a></li></ul>
+        <div class="fctitle">Industries</div>
+        <ul class="flinks">
+          <li><a href="/industries/salons.html">Hair Salons</a></li>
+          <li><a href="/industries/barbershops.html">Barbershops</a></li>
+          <li><a href="/industries/gyms.html">Gyms &amp; Fitness</a></li>
+          <li><a href="/industries/restaurants.html">Restaurants</a></li>
+          <li><a href="/industries/spas.html">Spas &amp; Wellness</a></li>
+          <li><a href="/industries/pet-grooming.html">Pet Grooming</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="fctitle">Solutions</div>
+        <ul class="flinks">
+          <li><a href="/solutions/appointments.html">Appointments</a></li>
+          <li><a href="/solutions/payments.html">Payments &amp; POS</a></li>
+          <li><a href="/solutions/payroll.html">Payroll &amp; HCM</a></li>
+          <li><a href="/solutions/banking.html">Banking</a></li>
+          <li><a href="/solutions/ai-receptionist.html">AI Receptionist</a></li>
+          <li><a href="/solutions/profit-intelligence.html">Profit Intelligence</a></li>
+        </ul>
       </div>
       <div>
         <div class="fctitle">Company</div>
@@ -871,6 +924,17 @@ document.querySelectorAll('.fu').forEach(el=>obs.observe(el));
 function animCount(el,target,dur){let n=0;const step=target/(dur/16);const t=setInterval(()=>{n=Math.min(n+step,target);el.textContent='$'+Math.floor(n).toLocaleString();if(n>=target)clearInterval(t)},16)}
 window.addEventListener('load',()=>{const el=document.getElementById('counter');if(el)setTimeout(()=>animCount(el,4230,1400),600)});
 document.getElementById('wl-form').addEventListener('submit',function(e){e.preventDefault();const email=document.getElementById('wl-email').value.trim();if(!email)return;this.style.display='none';document.getElementById('wl-success').style.display='flex';console.log('Waitlist:',email)});
+// Dropdown menus
+['ind','sol'].forEach(id=>{
+  const toggle=document.getElementById(id+'-toggle');
+  const menu=document.getElementById(id+'-menu');
+  if(!toggle||!menu)return;
+  let timer;
+  toggle.parentElement.addEventListener('mouseenter',()=>{clearTimeout(timer);menu.style.display='block'});
+  toggle.parentElement.addEventListener('mouseleave',()=>{timer=setTimeout(()=>menu.style.display='none',200)});
+  toggle.addEventListener('click',e=>{e.preventDefault();menu.style.display=menu.style.display==='none'?'block':'none'});
+});
+
 document.getElementById('founders-form').addEventListener('submit',function(e){e.preventDefault();const data={name:document.getElementById('fw-name').value,email:document.getElementById('fw-email').value,business:document.getElementById('fw-biz').value,vertical:document.getElementById('fw-type').value,revenue:document.getElementById('fw-rev').value};this.style.display='none';document.getElementById('fw-success').style.display='flex';console.log('Founders:',data)});
 </script>
 </body>
