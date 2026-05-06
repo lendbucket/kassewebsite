@@ -78,7 +78,7 @@ nav.scrolled{box-shadow:0 2px 24px rgba(0,0,0,.25)}
 .hero-glow{position:absolute;border-radius:50%;pointer-events:none}
 .hero-glow-1{top:-200px;right:-100px;width:700px;height:700px;background:radial-gradient(ellipse,rgba(66,151,160,.15) 0%,transparent 65%)}
 .hero-glow-2{bottom:-100px;left:-200px;width:600px;height:600px;background:radial-gradient(ellipse,rgba(229,127,132,.10) 0%,transparent 65%)}
-.hero-inner{position:relative;z-index:1;display:grid;grid-template-columns:1fr 440px;gap:64px;align-items:center}
+.hero-inner{position:relative;z-index:1;display:grid;grid-template-columns:1fr 480px;gap:48px;align-items:center}
 .hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(229,127,132,.12);border:1px solid rgba(229,127,132,.25);color:#F4A4A8;padding:6px 14px;border-radius:100px;font-size:13px;font-weight:500;margin-bottom:28px;letter-spacing:-.1px}
 .bdot{width:6px;height:6px;border-radius:50%;background:var(--blush);animation:pulse 2s infinite}
 @keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(.75)}}
@@ -449,32 +449,187 @@ footer{background:var(--brand-dk);padding:64px 0 36px}
         </div>
       </div>
 
-      <div class="floats" aria-hidden="true">
-        <div class="fbadge fb1"><div class="ft">🤖 AI Receptionist</div><div class="fs">Booked 11 appointments overnight</div></div>
-        <div class="hcard">
-          <div class="hcard-bar">
-            <div class="hcd" style="background:#FF5F57"></div>
-            <div class="hcd" style="background:#FEBC2E"></div>
-            <div class="hcd" style="background:#28C840"></div>
-          </div>
-          <div class="hcard-body">
-            <div class="live-badge"><div class="live-dot"></div>LIVE</div>
-            <div class="rev-lbl">Today's Revenue</div>
-            <div class="rev-num" id="counter">$4,230</div>
-            <div class="rev-sub">↑ 12% vs yesterday · 41 appointments</div>
-            <div class="tgt-box">
-              <div class="tgt-lbl">Income Target Progress</div>
-              <div class="tgt-bar"><div class="tgt-fill"></div></div>
-              <div class="tgt-stat"><span>$4,230 today</span><span>73% of daily goal</span></div>
+      <div style="position:relative;z-index:1;flex:0 0 auto;width:min(440px,100%)">
+<div style="background:#1C3040;border-radius:14px;overflow:hidden;width:100%;font-family:Inter,-apple-system,sans-serif;border:1px solid rgba(255,255,255,.10);box-shadow:0 32px 64px rgba(0,0,0,.4)">
+  <!-- Topbar -->
+  <div style="background:#162837;height:44px;display:flex;align-items:center;justify-content:space-between;padding:0 16px;border-bottom:1px solid rgba(255,255,255,.08)">
+    <div style="display:flex;align-items:center;gap:12px">
+      <div style="font-weight:800;font-size:14px;color:#fff;letter-spacing:-0.5px">kasse<span style="color:#E57F84">.</span></div>
+      <div style="background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);border-radius:5px;padding:3px 9px;font-size:11px;color:rgba(255,255,255,.55)">Salon Envy &#9660;</div>
+    </div>
+    <div style="display:flex;align-items:center;gap:10px">
+      <div style="background:rgba(5,150,105,.15);border:1px solid rgba(5,150,105,.25);border-radius:100px;padding:2px 9px;font-size:10px;font-weight:600;color:#34D399;display:flex;align-items:center;gap:4px"><div style="width:5px;height:5px;border-radius:50%;background:#34D399"></div>Live</div>
+      <div style="width:26px;height:26px;border-radius:50%;background:#2F5061;border:1.5px solid #4297A0;display:flex;align-items:center;justify-content:center;font-size:9px;font-weight:700;color:#fff">RR</div>
+    </div>
+  </div>
+  <!-- Body -->
+  <div style="display:grid;grid-template-columns:148px 1fr">
+    <!-- Sidebar -->
+    <div style="background:#162837;border-right:1px solid rgba(255,255,255,.06);padding:14px 0">
+      <div style="font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:rgba(255,255,255,.25);padding:0 12px;margin-bottom:4px">Overview</div>
+      <div style="display:flex;align-items:center;gap:7px;padding:7px 12px;font-size:11px;font-weight:600;color:#fff;border-left:2px solid #E57F84;background:rgba(255,255,255,.05)"><span style="color:#E57F84;font-size:12px">&#9632;</span>Dashboard</div>
+      <div style="display:flex;align-items:center;gap:7px;padding:7px 12px;font-size:11px;color:rgba(255,255,255,.4)"><span style="font-size:12px;color:rgba(255,255,255,.25)">&#9632;</span>Reports</div>
+      <div style="font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:rgba(255,255,255,.25);padding:10px 12px 4px">Operations</div>
+      <div style="display:flex;align-items:center;gap:7px;padding:7px 12px;font-size:11px;color:rgba(255,255,255,.4)"><span style="font-size:12px;color:rgba(255,255,255,.25)">&#9632;</span>Appointments</div>
+      <div style="display:flex;align-items:center;gap:7px;padding:7px 12px;font-size:11px;color:rgba(255,255,255,.4)"><span style="font-size:12px;color:rgba(255,255,255,.25)">&#9632;</span>Payments</div>
+      <div style="display:flex;align-items:center;gap:7px;padding:7px 12px;font-size:11px;color:rgba(255,255,255,.4)"><span style="font-size:12px;color:rgba(255,255,255,.25)">&#9632;</span>Clients</div>
+      <div style="font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:rgba(255,255,255,.25);padding:10px 12px 4px">Team</div>
+      <div style="display:flex;align-items:center;gap:7px;padding:7px 12px;font-size:11px;color:rgba(255,255,255,.4)"><span style="font-size:12px;color:rgba(255,255,255,.25)">&#9632;</span>Staff</div>
+      <div style="display:flex;align-items:center;gap:7px;padding:7px 12px;font-size:11px;color:rgba(255,255,255,.4)"><span style="font-size:12px;color:rgba(255,255,255,.25)">&#9632;</span>Payroll</div>
+      <div style="font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:rgba(255,255,255,.25);padding:10px 12px 4px">Financial</div>
+      <div style="display:flex;align-items:center;gap:7px;padding:7px 12px;font-size:11px;color:rgba(255,255,255,.4)"><span style="font-size:12px;color:rgba(255,255,255,.25)">&#9632;</span>Banking</div>
+      <div style="font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:rgba(255,255,255,.25);padding:10px 12px 4px">AI Tools</div>
+      <div style="display:flex;align-items:center;gap:7px;padding:7px 12px;font-size:11px;color:rgba(255,255,255,.4)"><span style="font-size:12px;color:rgba(255,255,255,.25)">&#9632;</span>Receptionist</div>
+    </div>
+    <!-- Main -->
+    <div style="padding:16px;display:flex;flex-direction:column;gap:12px">
+      <div>
+        <div style="font-size:13px;font-weight:700;color:#fff;letter-spacing:-0.3px">Good morning, Robert.</div>
+        <div style="font-size:10px;color:rgba(255,255,255,.4);margin-top:2px">Tuesday, May 6, 2026 &nbsp;&middot;&nbsp; 14 appointments today</div>
+      </div>
+      <!-- Stats row -->
+      <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:8px">
+        <div style="background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.07);border-radius:8px;padding:10px 12px">
+          <div style="font-size:9px;font-weight:600;text-transform:uppercase;letter-spacing:.5px;color:rgba(255,255,255,.4);margin-bottom:6px">Revenue Today</div>
+          <div style="font-size:20px;font-weight:800;color:#fff;letter-spacing:-1px;line-height:1" id="dash-rev">$4,230</div>
+          <div style="font-size:10px;color:#34D399;margin-top:4px;font-weight:500">&#8593; 12% vs yesterday</div>
+        </div>
+        <div style="background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.07);border-radius:8px;padding:10px 12px">
+          <div style="font-size:9px;font-weight:600;text-transform:uppercase;letter-spacing:.5px;color:rgba(255,255,255,.4);margin-bottom:6px">Chair Utilization</div>
+          <div style="font-size:20px;font-weight:800;color:#fff;letter-spacing:-1px;line-height:1">78%</div>
+          <div style="font-size:10px;color:#34D399;margin-top:4px;font-weight:500">&#8593; 6pts vs last week</div>
+        </div>
+        <div style="background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.07);border-radius:8px;padding:10px 12px">
+          <div style="font-size:9px;font-weight:600;text-transform:uppercase;letter-spacing:.5px;color:rgba(255,255,255,.4);margin-bottom:6px">Rebook Rate</div>
+          <div style="font-size:20px;font-weight:800;color:#fff;letter-spacing:-1px;line-height:1">71%</div>
+          <div style="font-size:10px;color:#34D399;margin-top:4px;font-weight:500">&#8593; 4pts this month</div>
+        </div>
+        <div style="background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.07);border-radius:8px;padding:10px 12px">
+          <div style="font-size:9px;font-weight:600;text-transform:uppercase;letter-spacing:.5px;color:rgba(255,255,255,.4);margin-bottom:6px">Income Target</div>
+          <div style="font-size:20px;font-weight:800;color:#fff;letter-spacing:-1px;line-height:1">73%</div>
+          <div style="font-size:10px;color:rgba(255,255,255,.35);margin-top:4px">$1,570 to go today</div>
+        </div>
+      </div>
+      <!-- Chart + Staff -->
+      <div style="display:grid;grid-template-columns:1fr 188px;gap:10px">
+        <div style="background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.07);border-radius:8px;padding:12px">
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:12px">
+            <div style="font-size:11px;font-weight:600;color:#fff">Revenue this week</div>
+            <div style="display:flex;gap:3px">
+              <div style="font-size:9px;font-weight:600;padding:2px 7px;border-radius:3px;background:rgba(66,151,160,.2);color:#4297A0">Week</div>
+              <div style="font-size:9px;font-weight:600;padding:2px 7px;border-radius:3px;color:rgba(255,255,255,.35)">Month</div>
+              <div style="font-size:9px;font-weight:600;padding:2px 7px;border-radius:3px;color:rgba(255,255,255,.35)">Year</div>
             </div>
-            <div class="staff-lbl">Commission This Period</div>
-            <div class="srow"><div><div class="sname">Jennifer M.</div><div class="stype">Commission · 45%</div></div><div class="samount">$1,658</div></div>
-            <div class="srow"><div><div class="sname">Marcus J.</div><div class="stype">Booth Rent</div></div><div class="samount" style="color:var(--tx-xm)">$400 collected</div></div>
-            <div class="srow"><div><div class="sname">Lisa C.</div><div class="stype">W2 Hourly + Tips</div></div><div class="samount">$678</div></div>
+          </div>
+          <svg width="100%" height="80" viewBox="0 0 300 80" preserveAspectRatio="none">
+            <polyline points="0,65 43,52 86,38 129,45 172,26 215,32 258,16 300,20" fill="none" stroke="#4297A0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <polyline points="0,72 43,68 86,64 129,70 172,56 215,62 258,55 300,50" fill="none" stroke="rgba(255,255,255,.12)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="3 3"/>
+            <circle cx="300" cy="20" r="3" fill="#4297A0"/>
+            <text x="4" y="80" font-size="8" fill="rgba(255,255,255,.25)" font-family="Inter,sans-serif">Mon</text>
+            <text x="47" y="80" font-size="8" fill="rgba(255,255,255,.25)" font-family="Inter,sans-serif">Tue</text>
+            <text x="90" y="80" font-size="8" fill="rgba(255,255,255,.25)" font-family="Inter,sans-serif">Wed</text>
+            <text x="133" y="80" font-size="8" fill="rgba(255,255,255,.25)" font-family="Inter,sans-serif">Thu</text>
+            <text x="176" y="80" font-size="8" fill="rgba(255,255,255,.25)" font-family="Inter,sans-serif">Fri</text>
+            <text x="219" y="80" font-size="8" fill="rgba(255,255,255,.25)" font-family="Inter,sans-serif">Sat</text>
+            <text x="258" y="80" font-size="8" fill="rgba(255,255,255,.25)" font-family="Inter,sans-serif">Sun</text>
+          </svg>
+        </div>
+        <div style="background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.07);border-radius:8px;padding:12px">
+          <div style="font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:rgba(255,255,255,.35);margin-bottom:8px">Staff Today</div>
+          <div style="display:flex;align-items:center;gap:7px;padding:5px 0;border-bottom:1px solid rgba(255,255,255,.05)">
+            <div style="width:24px;height:24px;border-radius:50%;background:rgba(66,151,160,.2);color:#4297A0;display:flex;align-items:center;justify-content:center;font-size:9px;font-weight:700;flex-shrink:0">JM</div>
+            <div style="flex:1"><div style="font-size:10px;font-weight:600;color:rgba(255,255,255,.85)">Jennifer M.</div><div style="font-size:9px;color:rgba(255,255,255,.35)">6 appts</div></div>
+            <div style="font-size:11px;font-weight:700;color:#4297A0">$842</div>
+          </div>
+          <div style="display:flex;align-items:center;gap:7px;padding:5px 0;border-bottom:1px solid rgba(255,255,255,.05)">
+            <div style="width:24px;height:24px;border-radius:50%;background:rgba(229,127,132,.15);color:#E57F84;display:flex;align-items:center;justify-content:center;font-size:9px;font-weight:700;flex-shrink:0">AS</div>
+            <div style="flex:1"><div style="font-size:10px;font-weight:600;color:rgba(255,255,255,.85)">Ashley S.</div><div style="font-size:9px;color:rgba(255,255,255,.35)">4 appts</div></div>
+            <div style="font-size:11px;font-weight:700;color:#4297A0">$510</div>
+          </div>
+          <div style="display:flex;align-items:center;gap:7px;padding:5px 0;border-bottom:1px solid rgba(255,255,255,.05)">
+            <div style="width:24px;height:24px;border-radius:50%;background:rgba(255,255,255,.07);color:rgba(255,255,255,.4);display:flex;align-items:center;justify-content:center;font-size:9px;font-weight:700;flex-shrink:0">MJ</div>
+            <div style="flex:1"><div style="font-size:10px;font-weight:600;color:rgba(255,255,255,.5)">Marcus J.</div><div style="font-size:9px;color:rgba(255,255,255,.25)">Booth rent</div></div>
+            <div style="font-size:11px;font-weight:700;color:rgba(255,255,255,.25)">-</div>
+          </div>
+          <div style="display:flex;align-items:center;gap:7px;padding:5px 0">
+            <div style="width:24px;height:24px;border-radius:50%;background:rgba(66,151,160,.15);color:#4297A0;display:flex;align-items:center;justify-content:center;font-size:9px;font-weight:700;flex-shrink:0">LC</div>
+            <div style="flex:1"><div style="font-size:10px;font-weight:600;color:rgba(255,255,255,.85)">Lisa C.</div><div style="font-size:9px;color:rgba(255,255,255,.35)">Front desk</div></div>
+            <div style="font-size:11px;font-weight:700;color:rgba(255,255,255,.4)">$120</div>
           </div>
         </div>
-        <div class="fbadge fb2"><div class="ft">💰 Payroll sent</div><div class="fs">$8,420 disbursed · 6 staff</div></div>
       </div>
+      <!-- Appointments + Alerts -->
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
+        <div style="background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.07);border-radius:8px;padding:12px">
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px">
+            <div style="font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:rgba(255,255,255,.35)">Appointments Today</div>
+            <div style="font-size:10px;color:rgba(255,255,255,.35)">14 total</div>
+          </div>
+          <div style="display:flex;align-items:center;gap:7px;padding:6px 0;border-bottom:1px solid rgba(255,255,255,.05)">
+            <div style="font-size:9px;font-weight:600;color:rgba(255,255,255,.35);width:30px">9:00</div>
+            <div style="width:3px;height:28px;background:#4297A0;border-radius:2px;flex-shrink:0"></div>
+            <div style="flex:1"><div style="font-size:10px;font-weight:600;color:rgba(255,255,255,.85)">Sarah Johnson</div><div style="font-size:9px;color:rgba(255,255,255,.35)">Balayage + Toner</div></div>
+            <div style="font-size:10px;font-weight:600;color:#fff;margin-right:6px">$225</div>
+            <div style="font-size:8px;font-weight:700;padding:2px 6px;border-radius:100px;background:rgba(52,211,153,.12);color:#34D399">In chair</div>
+          </div>
+          <div style="display:flex;align-items:center;gap:7px;padding:6px 0;border-bottom:1px solid rgba(255,255,255,.05)">
+            <div style="font-size:9px;font-weight:600;color:rgba(255,255,255,.35);width:30px">11:30</div>
+            <div style="width:3px;height:28px;background:#4297A0;border-radius:2px;flex-shrink:0"></div>
+            <div style="flex:1"><div style="font-size:10px;font-weight:600;color:rgba(255,255,255,.85)">Maria Garcia</div><div style="font-size:9px;color:rgba(255,255,255,.35)">Root Touch-Up</div></div>
+            <div style="font-size:10px;font-weight:600;color:#fff;margin-right:6px">$95</div>
+            <div style="font-size:8px;font-weight:700;padding:2px 6px;border-radius:100px;background:rgba(52,211,153,.12);color:#34D399">Confirmed</div>
+          </div>
+          <div style="display:flex;align-items:center;gap:7px;padding:6px 0;border-bottom:1px solid rgba(255,255,255,.05)">
+            <div style="font-size:9px;font-weight:600;color:rgba(255,255,255,.35);width:30px">1:00</div>
+            <div style="width:3px;height:28px;background:#FBB724;border-radius:2px;flex-shrink:0"></div>
+            <div style="flex:1"><div style="font-size:10px;font-weight:600;color:rgba(255,255,255,.85)">New Client</div><div style="font-size:9px;color:rgba(255,255,255,.35)">Cut + Blowdry</div></div>
+            <div style="font-size:10px;font-weight:600;color:#fff;margin-right:6px">$75</div>
+            <div style="font-size:8px;font-weight:700;padding:2px 6px;border-radius:100px;background:rgba(251,191,36,.12);color:#FBB724">Unconfirmed</div>
+          </div>
+          <div style="display:flex;align-items:center;gap:7px;padding:6px 0">
+            <div style="font-size:9px;font-weight:600;color:rgba(255,255,255,.35);width:30px">3:00</div>
+            <div style="width:3px;height:28px;background:#F87171;border-radius:2px;flex-shrink:0"></div>
+            <div style="flex:1"><div style="font-size:10px;font-weight:600;color:rgba(255,255,255,.85)">David Kim</div><div style="font-size:9px;color:rgba(255,255,255,.35)">Color Correction</div></div>
+            <div style="font-size:10px;font-weight:600;color:#fff;margin-right:6px">$280</div>
+            <div style="font-size:8px;font-weight:700;padding:2px 6px;border-radius:100px;background:rgba(248,113,113,.12);color:#F87171">No-show risk</div>
+          </div>
+        </div>
+        <div style="background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.07);border-radius:8px;padding:12px">
+          <div style="font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:rgba(255,255,255,.35);margin-bottom:8px">Kasse Alerts</div>
+          <div style="display:flex;gap:8px;padding:6px 0;border-bottom:1px solid rgba(255,255,255,.05)">
+            <div style="width:22px;height:22px;border-radius:5px;background:rgba(251,191,36,.15);display:flex;align-items:center;justify-content:center;font-size:11px;flex-shrink:0;color:#FBB724">!</div>
+            <div><div style="font-size:10px;font-weight:600;color:rgba(255,255,255,.8)">Keratin Treatment underpriced</div><div style="font-size:9px;color:rgba(255,255,255,.4);margin-top:2px">Should be $268 at your income target. Currently $220.</div></div>
+          </div>
+          <div style="display:flex;gap:8px;padding:6px 0;border-bottom:1px solid rgba(255,255,255,.05)">
+            <div style="width:22px;height:22px;border-radius:5px;background:rgba(251,191,36,.15);display:flex;align-items:center;justify-content:center;font-size:11px;flex-shrink:0;color:#FBB724">!</div>
+            <div><div style="font-size:10px;font-weight:600;color:rgba(255,255,255,.8)">Jennifer TDLR license</div><div style="font-size:9px;color:rgba(255,255,255,.4);margin-top:2px">Expires in 23 days. Renew before June 1.</div></div>
+          </div>
+          <div style="display:flex;gap:8px;padding:6px 0;border-bottom:1px solid rgba(255,255,255,.05)">
+            <div style="width:22px;height:22px;border-radius:5px;background:rgba(52,211,153,.12);display:flex;align-items:center;justify-content:center;font-size:11px;flex-shrink:0;color:#34D399">&#10003;</div>
+            <div><div style="font-size:10px;font-weight:600;color:rgba(255,255,255,.8)">3 bookings overnight</div><div style="font-size:9px;color:rgba(255,255,255,.4);margin-top:2px">AI Receptionist captured $485 while you were offline.</div></div>
+          </div>
+          <div style="display:flex;gap:8px;padding:6px 0">
+            <div style="width:22px;height:22px;border-radius:5px;background:rgba(66,151,160,.15);display:flex;align-items:center;justify-content:center;font-size:11px;flex-shrink:0;color:#4297A0">&#8635;</div>
+            <div><div style="font-size:10px;font-weight:600;color:rgba(255,255,255,.8)">Win-back sent to 12 clients</div><div style="font-size:9px;color:rgba(255,255,255,.4);margin-top:2px">4 have rebooked so far this week.</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+(function(){
+  var v=4230;
+  setInterval(function(){
+    if(Math.random()>0.6){
+      v+=Math.floor(Math.random()*45+10);
+      var el=document.getElementById('dash-rev');
+      if(el)el.textContent='$'+v.toLocaleString();
+    }
+  },3000);
+})();
+</script>
+</div>
     </div>
   </div>
 </section>
